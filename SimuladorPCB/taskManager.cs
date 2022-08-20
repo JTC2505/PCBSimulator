@@ -35,5 +35,30 @@ namespace SimuladorPCB
         {
             cargaProceso();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            textBox1.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            textBox2.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            if (dataGridView1.CurrentRow.Cells[3].Value.ToString() == "apagado")
+            {
+                textBox3.BackColor = Color.Black;
+            }
+            else if (dataGridView1.CurrentRow.Cells[3].Value.ToString() == "finalizado")
+            {
+                textBox3.BackColor = Color.DarkBlue;
+            }
+            else if (dataGridView1.CurrentRow.Cells[3].Value.ToString() == "encendido")
+            {
+                textBox3.BackColor = Color.Green;
+            }
+            else if (dataGridView1.CurrentRow.Cells[3].Value.ToString() == "espera")
+            {
+                textBox3.BackColor = Color.Red;
+            }
+            textBox3.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            textBox4.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            textBox5.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+        }
     }
 }

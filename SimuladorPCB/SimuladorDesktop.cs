@@ -20,44 +20,42 @@ namespace SimuladorPCB
             InitializeComponent();
         }
 
+        public int CodVentana = 0;
+
         private void button1_Click(object sender, EventArgs e)
         {
-            Properties.Settings.Default.word = "iniciando";
-            Properties.Settings.Default.Save();
-
             startPrograms("Microsoft Word");
+            CodVentana = 1;
+            timer1.Start();
 
-            groupBox1.Visible = true;
-            button1.Enabled = false;
-
-            label1.Text = Properties.Settings.Default.word.ToString();
+            Properties.Settings.Default.word = "espera";
+            Properties.Settings.Default.Save();
 
             afterStartProgram("Microsoft Word");
-
-            Properties.Settings.Default.word = "encendido";
-            Properties.Settings.Default.Save();
         }
 
         private void close1_Click_1(object sender, EventArgs e)
         {
+
             groupBox1.Visible = false;
             button1.Enabled = true;
 
-            Properties.Settings.Default.word = "apagado";
+            Properties.Settings.Default.word = "finalizado";
             Properties.Settings.Default.Save();
 
-
+            finishPrograms("Microsoft Word");
         }
         
         private void button2_Click(object sender, EventArgs e)
         {
-            groupBox2.Visible = true;
-            button2.Enabled = false;
+            startPrograms("Spotify");
+            CodVentana = 2;
+            timer1.Start();
 
-            Properties.Settings.Default.spotify = "encendido";
+            Properties.Settings.Default.spotify = "espera";
             Properties.Settings.Default.Save();
 
-            label2.Text = Properties.Settings.Default.spotify.ToString();
+            afterStartProgram("Spotify");
         }
 
 
@@ -66,41 +64,49 @@ namespace SimuladorPCB
             groupBox2.Visible = false;
             button2.Enabled = true;
 
-            Properties.Settings.Default.spotify = "apagado";
+            Properties.Settings.Default.spotify = "finalizado";
             Properties.Settings.Default.Save();
+
+            finishPrograms("Spotify");
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            groupBox3.Visible = true;
-            button3.Enabled = false;
+            startPrograms("Chrome");
+            CodVentana = 3;
+            timer1.Start();
 
-            Properties.Settings.Default.chrome = "encendido";
+            Properties.Settings.Default.chrome = "espera";
             Properties.Settings.Default.Save();
 
-            label3.Text = Properties.Settings.Default.chrome.ToString();
+            afterStartProgram("Chrome");
         }
 
         private void close3_Click(object sender, EventArgs e)
         {
+
             groupBox3.Visible = false;
             button3.Enabled = true;
 
-            Properties.Settings.Default.chrome = "apagado";
+            Properties.Settings.Default.chrome = "finalizado";
             Properties.Settings.Default.Save();
+
+            finishPrograms("Chrome");
         }
 
 
         private void button4_Click(object sender, EventArgs e)
         {
-            groupBox4.Visible = true;
-            button4.Enabled = false;
+            startPrograms("Gmail");
+            CodVentana = 4;
+            timer1.Start();
 
-            Properties.Settings.Default.gmail = "encendido";
+            Properties.Settings.Default.gmail = "espera";
             Properties.Settings.Default.Save();
 
-            label4.Text = Properties.Settings.Default.gmail.ToString();
+            afterStartProgram("Gmail");
+
         }
         
         private void close4_Click(object sender, EventArgs e)
@@ -108,41 +114,13 @@ namespace SimuladorPCB
             groupBox4.Visible = false;
             button4.Enabled = true;
 
-            Properties.Settings.Default.gmail = "apagado";
-            Properties.Settings.Default.Save();
-        }
-
-        private void minimizar1_Click(object sender, EventArgs e)
-        {
-            Properties.Settings.Default.word = "espera";
+            Properties.Settings.Default.gmail = "finalizado";
             Properties.Settings.Default.Save();
 
-            label1.Text = Properties.Settings.Default.word.ToString();
+            finishPrograms("Gmail");
         }
 
-        private void minimizar2_Click(object sender, EventArgs e)
-        {
-            Properties.Settings.Default.spotify = "espera";
-            Properties.Settings.Default.Save();
-
-            label2.Text = Properties.Settings.Default.spotify.ToString();
-        }
-
-        private void minimizar3_Click(object sender, EventArgs e)
-        {
-            Properties.Settings.Default.chrome = "espera";
-            Properties.Settings.Default.Save();
-
-            label3.Text = Properties.Settings.Default.chrome.ToString();
-        }
-
-        private void minimizar4_Click(object sender, EventArgs e)
-        {
-            Properties.Settings.Default.gmail = "espera";
-            Properties.Settings.Default.Save();
-
-            label4.Text = Properties.Settings.Default.gmail.ToString();
-        }
+       
 
         public void startPrograms(string program)
         {
@@ -164,14 +142,6 @@ namespace SimuladorPCB
 
         public void afterStartProgram(string program)
         {
-            if (program.Equals("Google Chrome"))
-            {
-                System.Threading.Thread.Sleep(2500);
-            }
-            else
-            {
-                System.Threading.Thread.Sleep(10000);
-            }
             Registro registro = new Registro();
             registro.name = program;
             registro.dateTime = DateTime.Now.ToString();
@@ -183,6 +153,46 @@ namespace SimuladorPCB
         private void SimuladorDesktop_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            switch (CodVentana)
+            {
+                case 1:
+                    groupBox1.Visible = true;
+                    button1.Enabled = false;
+
+                    Properties.Settings.Default.word = "encendido";
+                    Properties.Settings.Default.Save();
+                    break;
+                case 2:
+                    groupBox2.Visible = true;
+                    button2.Enabled = false;
+
+                    Properties.Settings.Default.spotify = "encendido";
+                    Properties.Settings.Default.Save();
+                    break;
+                case 3:
+                    groupBox3.Visible = true;
+                    button3.Enabled = false;
+
+                    Properties.Settings.Default.chrome = "encendido";
+                    Properties.Settings.Default.Save();
+                    break;
+                case 4:
+                    groupBox4.Visible = true;
+                    button4.Enabled = false;
+
+                    Properties.Settings.Default.gmail = "encendido";
+                    Properties.Settings.Default.Save();
+                    break;
+            }
+            
+
+           
+
+            timer1.Stop();
         }
 
     }

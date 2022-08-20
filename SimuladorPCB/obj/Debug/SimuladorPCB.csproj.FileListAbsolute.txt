@@ -10,17 +10,3 @@ d:\users\axel olcot\documents\visual studio 2012\Projects\SimuladorPCB\Simulador
 d:\users\axel olcot\documents\visual studio 2012\Projects\SimuladorPCB\SimuladorPCB\obj\Debug\SimuladorPCB.pdb
 d:\users\axel olcot\documents\visual studio 2012\Projects\SimuladorPCB\SimuladorPCB\obj\Debug\SimuladorPCB.taskManager.resources
 D:\Users\Axel Olcot\Documents\Visual Studio 2012\Projects\SimuladorPCB\SimuladorPCB\obj\Debug\SimuladorPCB.logRegister.resources
-C:\Users\estua\Downloads\SimuladorPCB\SimuladorPCB\bin\Debug\SimuladorPCB.exe.config
-C:\Users\estua\Downloads\SimuladorPCB\SimuladorPCB\bin\Debug\SimuladorPCB.exe
-C:\Users\estua\Downloads\SimuladorPCB\SimuladorPCB\bin\Debug\SimuladorPCB.pdb
-C:\Users\estua\Downloads\SimuladorPCB\SimuladorPCB\obj\Debug\SimuladorPCB.csproj.AssemblyReference.cache
-C:\Users\estua\Downloads\SimuladorPCB\SimuladorPCB\obj\Debug\SimuladorPCB.csproj.SuggestedBindingRedirects.cache
-C:\Users\estua\Downloads\SimuladorPCB\SimuladorPCB\obj\Debug\SimuladorPCB.logRegister.resources
-C:\Users\estua\Downloads\SimuladorPCB\SimuladorPCB\obj\Debug\SimuladorPCB.SimulatorPCB.resources
-C:\Users\estua\Downloads\SimuladorPCB\SimuladorPCB\obj\Debug\SimuladorPCB.Properties.Resources.resources
-C:\Users\estua\Downloads\SimuladorPCB\SimuladorPCB\obj\Debug\SimuladorPCB.SimuladorDesktop.resources
-C:\Users\estua\Downloads\SimuladorPCB\SimuladorPCB\obj\Debug\SimuladorPCB.taskManager.resources
-C:\Users\estua\Downloads\SimuladorPCB\SimuladorPCB\obj\Debug\SimuladorPCB.csproj.GenerateResource.cache
-C:\Users\estua\Downloads\SimuladorPCB\SimuladorPCB\obj\Debug\SimuladorPCB.csproj.CoreCompileInputs.cache
-C:\Users\estua\Downloads\SimuladorPCB\SimuladorPCB\obj\Debug\SimuladorPCB.exe
-C:\Users\estua\Downloads\SimuladorPCB\SimuladorPCB\obj\Debug\SimuladorPCB.pdb
