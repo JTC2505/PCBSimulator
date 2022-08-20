@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SimuladorPCB.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="word" Type="System.String" Scope="User">
+      <Value Profile="(Default)">apagado</Value>
+    </Setting>
+    <Setting Name="spotify" Type="System.String" Scope="User">
+      <Value Profile="(Default)">apagado</Value>
+    </Setting>
+    <Setting Name="chrome" Type="System.String" Scope="User">
+      <Value Profile="(Default)">apagado</Value>
+    </Setting>
+    <Setting Name="gmail" Type="System.String" Scope="User">
+      <Value Profile="(Default)">apagado</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
